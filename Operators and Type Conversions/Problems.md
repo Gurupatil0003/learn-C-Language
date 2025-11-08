@@ -25,25 +25,14 @@ int main(){
 ```c
 #include <stdio.h>
 
-int main(){
+int main() {
     int p,q;
-
-    scanf("%d %d",&p, &q);
-
-    int a=p && q;
-    int or=p||q;
-    int xo=p^q;
-    int not=!p;
-
-    printf("AND: %d\n",a);
-    printf("OR : %d\n",or);
-    printf("XOR: %d\n",xo);
-    printf("NOT: %d\n",not);
-
-    return 0;
+    scanf("%d %d",&p,&q);
+    printf("AND: %d\n",p&q);
+    printf("OR : %d\n",p|q);
+    printf("XOR: %d\n",p^q);
+    printf("NOT: %d",!p);
 }
-
-
 ```
 
 ```c
@@ -79,7 +68,6 @@ int main() {
 
 
 ```
-
 
 ```c
 #include <stdio.h>
@@ -121,5 +109,43 @@ int main() {
     return 0;
 }
 
+```
+# 7
+```c
+#include <stdio.h>
 
+int main() {
+    int x, y;
+
+    // Read two integers
+    scanf("%d %d", &x, &y);
+
+    // Compute and display each remainder
+    printf("x%%y      : %d\n", x % y);
+    printf("(-x)%%y   : %d\n", (-x) % y);
+    printf("x%%(-y)   : %d\n", x % (-y));
+    printf("(-x)%%(-y): %d\n", (-x) % (-y));
+
+    return 0;
+}
+```
+# 10
+```c
+#include <stdio.h>
+
+int main() {
+    int p, q, r;
+
+    // Read input values (0 or 1)
+    scanf("%d %d %d", &p, &q, &r);
+
+    // Compute and print each logical expression
+    printf("AND_PQ : %d\n", p && q);
+    printf("OR_PQ  : %d\n", p || q);
+    printf("NOT_P  : %d\n", !p);
+    printf("CMB1   : %d\n", (p || q) && r);
+    printf("CMB2   : %d\n", p ^ (q || r));  // XOR operator
+
+    return 0;
+}
 ```
