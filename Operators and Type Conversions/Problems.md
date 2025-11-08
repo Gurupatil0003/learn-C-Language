@@ -49,20 +49,34 @@ int main(){
 ```c
 #include <stdio.h>
 
-int main(){
-
-    int s,add,sub,mul,divv,modd;
-
-    scanf("%d %d %d %d %d %d",&s,&add,&sub,&mul,&divv,&modd);
-
-    printf("START: %d\n",s);
-
-…    printf("DIV  : %d\n",s);
-
-    s%=modd;
-    printf("MOD  : %d\n",s);
-
+int main() {
+    int S, add, sub, mul, divv, modd;
+    
+    // Read input
+    scanf("%d %d %d %d %d %d", &S, &add, &sub, &mul, &divv, &modd);
+    
+    // Display initial score
+    printf("START: %d\n", S);
+    
+    // Apply operations in sequence
+    S += add;
+    printf("ADD  : %d\n", S);
+    
+    S -= sub;
+    printf("SUB  : %d\n", S);
+    
+    S *= mul;
+    printf("MUL  : %d\n", S);
+    
+    S /= divv;  // integer division
+    printf("DIV  : %d\n", S);
+    
+    S %= modd;
+    printf("MOD  : %d\n", S);
+    
+    return 0;
 }
+
 
 ```
 
